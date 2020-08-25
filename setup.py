@@ -12,11 +12,14 @@ setup_args = dict(
     license='MIT',
     packages=find_packages(),
     author='Harsh Singhal',
-    author_email='harshsinghal726@gmail.com'
+    author_email='harshsinghal726@gmail.com',
+    python_requires='>=3.6',
 )
 
 install_requires = [
-    'bs4'
+    'bs4',
+    'tqdm',
+    'fake_useragent'
 ]
 
 if __name__ == '__main__':

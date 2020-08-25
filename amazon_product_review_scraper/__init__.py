@@ -1,1 +1,1 @@
-from amazon_product_review_scraper.amazon_product_review_scraper import amazon_review_scraper
+from amazon_product_review_scraper.amazon_product_review_scraper import amazon_product_review_scraper
