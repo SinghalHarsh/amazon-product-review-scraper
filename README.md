@@ -1,9 +1,6 @@
-=============================
-Amazon Product Review Scraper
-=============================
+# Amazon Product Review Scraper
 Python package to scrape product review data from amazon
 
-Installation
-============
+## Installation
 
     pip install amazon-product-review-scraper
