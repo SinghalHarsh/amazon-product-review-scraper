@@ -48,7 +48,7 @@ class amazon_product_review_scraper:
         content = soup.find_all("span", {"data-hook": "cr-filter-info-review-count"})
         total_reviews = int(content[0].contents[0].split(' ')[-2])
         
-        print ("Total reviews: {}".format(total_reviews), flush=True)
+        print ("Total reviews (all pages): {}".format(total_reviews), flush=True)
         
         total_pages = math.ceil(total_reviews/10)
         return total_pages
@@ -57,11 +57,14 @@ class amazon_product_review_scraper:
     # MAIN FUNCTION
     def scraper(self):
 
+        
+        print ("Total pages: {}".format(self.end_page - self.start_page+1), flush=True)
+        print ("Start page: {}; End page: {}".format(self.start_page, self.end_page))
+        print ()
         print ("Started!", flush=True)
-        print ("Total pages: {}".format(self.end_page), flush=True)
 
         for page in tqdm(range(self.start_page, self.end_page+1)):
-            status = self.page_scraper(page)
+            self.page_scraper(page)
             #
             time.sleep(self.sleep_time)
 
@@ -124,7 +127,7 @@ class amazon_product_review_scraper:
             self.reviews_dict['rating'].extend(rating_lst)
 
         except:
-            print ("Not able to scrape page {}".format(page), flush=True)
+            print ("Not able to scrape page {} (CAPTCHA is not bypassed)".format(page), flush=True)
     
     
     # wrapper around request package to make it resilient
@@ -132,7 +135,7 @@ class amazon_product_review_scraper:
         
         while (True):
             # amazon blocks requests that does not come from browser, therefore need to mention user-agent
-            response = requests.get(self.url, verify=False, headers={'User-Agent': self.ua}, proxies=self.proxy)
+            response = requests.get(url, verify=False, headers={'User-Agent': self.ua}, proxies=self.proxy)
             
             # checking the response code
             if (response.status_code != 200):
