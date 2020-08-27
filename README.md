@@ -19,11 +19,6 @@ reviews_df.head(5)
 </kbd>
 
 ## Parameters
-<<<<<<< HEAD
->>>>>>> aca4b3798a9b92a6d171e686ab18637c6bcc6d1b
-
-
-=======
 
 1. #### ```amazon_site```
    **Examples**: amazon.in, amazon.com, amazon.co.uk
@@ -41,4 +36,3 @@ reviews_df.head(5)
    
 4. #### ```start_page``` (Optional)
 5. #### ```end_page``` (Optional)
->>>>>>> 80a15e08ea0e0c266d963f2e7f7522a9e562ec3d
