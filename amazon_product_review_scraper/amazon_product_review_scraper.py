@@ -19,10 +19,10 @@ ua = UserAgent(cache=False, use_cache_server=False)
 
 class amazon_product_review_scraper:
     
-    def __init__(self, amazon_site, product_id, sleep_time=1, start_page=1, end_page=None):
+    def __init__(self, amazon_site, product_asin, sleep_time=1, start_page=1, end_page=None):
         
         # url
-        self.url = "https://www." + amazon_site + "/dp/product-reviews/" + product_id + "?pageNumber={}"
+        self.url = "https://www." + amazon_site + "/dp/product-reviews/" + product_asin + "?pageNumber={}"
         self.sleep_time = sleep_time
         self.reviews_dict = {"date_info":[], "name":[], "title":[], "content":[], "rating":[]}
         
