@@ -26,6 +26,7 @@ reviews_df.head(5)
 2. #### ```product_asin```
    Product ASIN [(Amazon Standard Identification Number)](https://www.nchannel.com/blog/amazon-asin-what-is-an-asin-number/)
    An ASIN is a 10-character alphanumeric unique identifier that is assigned to each product on amazon.
+   
    **Examples**:
    * https<span>://ww</span>w.amazon.i<span>n/Grand-Theft-Auto-V-PS4/dp/<code><b><ins>B00L8XUDIC</ins></b></code>/ref=sr_1_1
    * http</span>s://ww<span>w.amazon.</span>in/Renewed-Sony-Cybershot-DSC-RX100-Digital/dp/<code><b><ins>B07XRVR9B9</ins></b></code>/ref=lp_20690678031_1_14?srs=20690678031&ie=UTF8&qid=1598553991&sr=8-14
