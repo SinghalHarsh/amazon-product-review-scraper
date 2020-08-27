@@ -20,19 +20,19 @@ reviews_df.head(5)
 
 ## Parameters
 
-#### ```amazon_site```
-**Examples**: amazon.in, amazon.com, amazon.co.uk
+1. #### ```amazon_site```
+   **Examples**: amazon.in, amazon.com, amazon.co.uk
 
-#### ```product_asin```
-Product ASIN [(Amazon Standard Identification Number)](https://www.nchannel.com/blog/amazon-asin-what-is-an-asin-number/)
-An ASIN is a 10-character alphanumeric unique identifier that is assigned to each product on amazon.
-**Examples**:
-* https<span>://ww</span>w.amazon.i<span>n/Grand-Theft-Auto-V-PS4/dp/<code><b><ins>B00L8XUDIC</ins></b></code>/ref=sr_1_1
-* http</span>s://ww<span>w.amazon.</span>in/Renewed-Sony-Cybershot-DSC-RX100-Digital/dp/<code><b><ins>B07XRVR9B9</ins></b></code>/ref=lp_20690678031_1_14?srs=20690678031&ie=UTF8&qid=1598553991&sr=8-14
+2. #### ```product_asin```
+   Product ASIN [(Amazon Standard Identification Number)](https://www.nchannel.com/blog/amazon-asin-what-is-an-asin-number/)
+   An ASIN is a 10-character alphanumeric unique identifier that is assigned to each product on amazon.
+   **Examples**:
+   * https<span>://ww</span>w.amazon.i<span>n/Grand-Theft-Auto-V-PS4/dp/<code><b><ins>B00L8XUDIC</ins></b></code>/ref=sr_1_1
+   * http</span>s://ww<span>w.amazon.</span>in/Renewed-Sony-Cybershot-DSC-RX100-Digital/dp/<code><b><ins>B07XRVR9B9</ins></b></code>/ref=lp_20690678031_1_14?srs=20690678031&ie=UTF8&qid=1598553991&sr=8-14
      
-#### ```sleep_time``` (Optional)
-Number of seconds to wait before scraping the next page.
-(Amazon might intervene with CAPTCHA if receives too many requests in a small period of time)
+3. #### ```sleep_time``` (Optional)
+   Number of seconds to wait before scraping the next page.
+   (Amazon might intervene with CAPTCHA if receives too many requests in a small period of time)
    
-#### ```start_page``` (Optional)
-#### ```end_page``` (Optional)
+4. #### ```start_page``` (Optional)
+5. #### ```end_page``` (Optional)
