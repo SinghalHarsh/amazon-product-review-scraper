@@ -46,7 +46,7 @@ class amazon_product_review_scraper:
         
         ## TODO if else
         content = soup.find_all("span", {"data-hook": "cr-filter-info-review-count"})
-        total_reviews = int(content[0].contents[0].split(' ')[-2])
+        total_reviews = int((content[0].contents[0].split(' ')[-2]).replace(',', ''))
         
         print ("Total reviews (all pages): {}".format(total_reviews), flush=True)
         
@@ -55,7 +55,7 @@ class amazon_product_review_scraper:
 
  
     # MAIN FUNCTION
-    def scraper(self):
+    def scrape(self):
 
         
         print ("Total pages: {}".format(self.end_page - self.start_page+1), flush=True)
@@ -142,12 +142,12 @@ class amazon_product_review_scraper:
                 raise Exception(response.raise_for_status())
             
             # checking whether capcha is bypassed or not (status code is 200 in case it displays the capcha image)
-            if "Robot Check" in response.text:
-                time.sleep(self.sleep_time)
+            if "api-services-support@amazon.com" in response.text:
                 
                 if (self.max_try == 0):
                     raise Exception("CAPTCHA is not bypassed")
                 else:
+                    time.sleep(self.sleep_time)
                     self.max_try -= 1
                     self.ua = ua.random
                     self.proxy = choice(self.proxies)

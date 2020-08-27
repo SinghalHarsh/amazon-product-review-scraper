@@ -6,7 +6,7 @@ with open('README.md') as readme_file:
 setup_args = dict(
     name='amazon_product_review_scraper',
     packages=find_packages(),
-    version='0.1',
+    version='0.3',
     description='Python package to scrape product review data from amazon',
     long_description_content_type="text/markdown",
     long_description=README,
@@ -15,6 +15,7 @@ setup_args = dict(
     author='Harsh Singhal',
     author_email='harshsinghal726@gmail.com',
     python_requires='>=3.6',
+    url="https://github.com/SinghalHarsh/amazon-product-review-scraper"
 )
 
 install_requires = [
