@@ -14,7 +14,9 @@ reviews_df = review_scraper.scrape()
 reviews_df.head(5)
 ```
     
-![quickstart](https://github.com/SinghalHarsh/amazon-product-review-scraper/blob/master/tutorials/quickstart.png)
+<kbd>
+  <img src="https://github.com/SinghalHarsh/amazon-product-review-scraper/blob/master/tutorials/quickstart.png">
+</kbd>
 
 ## Parameters
     
