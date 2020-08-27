@@ -1,16 +1,44 @@
 # Amazon Product Review Scraper
 Python package to scrape product review data from amazon
 
-<<<<<<< HEAD
-## Installation
-
-    pip install amazon-product-review-scraper
-=======
 ## Quickstart
 
-    pip install amazon-product-review-scraper
+```
+pip install amazon-product-review-scraper
+```
+        
+```
+from amazon_product_review_scraper import amazon_product_review_scraper
+review_scraper = amazon_product_review_scraper(amazon_site="amazon.in", product_asin="B07X6V2FR3")
+reviews_df = review_scraper.scrape()
+reviews_df.head(5)
+```
+    
+<kbd>
+  <img src="https://github.com/SinghalHarsh/amazon-product-review-scraper/blob/master/tutorials/quickstart.png">
+</kbd>
 
 ## Parameters
+<<<<<<< HEAD
 >>>>>>> aca4b3798a9b92a6d171e686ab18637c6bcc6d1b
 
 
+=======
+
+1. #### ```amazon_site```
+   **Examples**: amazon.in, amazon.com, amazon.co.uk
+
+2. #### ```product_asin```
+   Product ASIN [(Amazon Standard Identification Number)](https://www.nchannel.com/blog/amazon-asin-what-is-an-asin-number/)
+   An ASIN is a 10-character alphanumeric unique identifier that is assigned to each product on amazon.
+   **Examples**:
+   * https<span>://ww</span>w.amazon.i<span>n/Grand-Theft-Auto-V-PS4/dp/<code><b><ins>B00L8XUDIC</ins></b></code>/ref=sr_1_1
+   * http</span>s://ww<span>w.amazon.</span>in/Renewed-Sony-Cybershot-DSC-RX100-Digital/dp/<code><b><ins>B07XRVR9B9</ins></b></code>/ref=lp_20690678031_1_14?srs=20690678031&ie=UTF8&qid=1598553991&sr=8-14
+     
+3. #### ```sleep_time``` (Optional)
+   Number of seconds to wait before scraping the next page.
+   (Amazon might intervene with CAPTCHA if receives too many requests in a small period of time)
+   
+4. #### ```start_page``` (Optional)
+5. #### ```end_page``` (Optional)
+>>>>>>> 80a15e08ea0e0c266d963f2e7f7522a9e562ec3d
