@@ -14,7 +14,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 # random user-agent
 from fake_useragent import UserAgent
-ua = UserAgent(cache=False, use_cache_server=False)
+ua = UserAgent()
 
 
 class amazon_product_review_scraper:
