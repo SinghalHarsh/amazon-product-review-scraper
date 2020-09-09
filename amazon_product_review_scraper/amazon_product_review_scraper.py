@@ -44,10 +44,10 @@ class amazon_product_review_scraper:
         response = self.request_wrapper(self.url.format(1))
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        ## TODO if else
-        content = soup.find_all("span", {"data-hook": "cr-filter-info-review-count"})
-        total_reviews = int((content[0].contents[0].split(' ')[-2]).replace(',', ''))
-        
+        ## TODO if else        
+        content = soup.find_all("div", {"data-hook": "cr-filter-info-review-rating-count"})
+        total_reviews = int(content[0].find_all("span")[0].get_text("\n").strip().split(" ")[4])
+    
         print ("Total reviews (all pages): {}".format(total_reviews), flush=True)
         
         total_pages = math.ceil(total_reviews/10)
