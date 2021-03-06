@@ -105,7 +105,10 @@ class amazon_product_review_scraper:
             name_lst = self.helper(reviews, "span", "class", "a-profile-name")
 
             ## 3. rating
-            rating_lst = self.helper(reviews, "span", "class", "a-icon-alt")
+            ratings = reviews.find_all("i", {"data-hook":"review-star-rating"})
+            rating_lst = []
+            for rating in ratings:
+                rating_lst.append(rating.find_all("span")[0].contents[0])
 
             ## 4. date
             date_lst = self.helper(reviews, "span", "data-hook", "review-date")   
