@@ -46,7 +46,7 @@ class amazon_product_review_scraper:
         
         ## TODO if else        
         content = soup.find_all("div", {"data-hook": "cr-filter-info-review-rating-count"})
-        total_reviews = int(content[0].find_all("span")[0].get_text("\n").strip().split(" ")[4])
+        total_reviews = int(content[0].find_all("span")[0].get_text("\n").strip().split(" ")[4].replace(",", ""))
     
         print ("Total reviews (all pages): {}".format(total_reviews), flush=True)
         
