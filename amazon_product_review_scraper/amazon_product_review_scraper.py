@@ -166,7 +166,8 @@ class amazon_product_review_scraper:
         proxies = []
         response = requests.get("https://sslproxies.org/")
         soup = BeautifulSoup(response.content, 'html.parser')
-        proxies_table = soup.find(id='proxylisttable')
+        # proxies_table = soup.find(id='proxylisttable')
+        proxies_table = soup.find(class_='table table-striped table-bordered')
         for row in proxies_table.tbody.find_all('tr'):
             proxies.append({
                 'ip':   row.find_all('td')[0].string,
